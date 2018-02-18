@@ -332,8 +332,8 @@ input {
 }
 @media (max-width: 420px) {
   body{
-    background: url('images/bg-logo-ico/bg-sml.jpg') no-repeat center center fixed;
-  }
+ background: rgba(0, 0, 0, 0.29) url('images/bg-logo-ico/bg-sml.jpg') no-repeat
+    center center fixed;  }
   .character-wrap {
     width: 100%;
   }
