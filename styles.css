@@ -305,6 +305,9 @@ input {
 }
 
 @media (max-width: 765px) {
+   body{
+    background: url('images/bg-logo-ico/bg-sml.jpg') no-repeat center center fixed;
+  }
   .overlay {
     display: -webkit-box;
     display: -ms-flexbox;
