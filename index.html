@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <link rel="stylesheet"
+          href="normalize.css">
+    <link rel="stylesheet"
+          href="styles.css">
+    <title>EDT Blizzard API Code Challange | Rishi Khatiwada</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/bg-logo-ico/edt_logo.png"
+                 alt="edt logo">
+        </div>
+
+        <div class="search-tool">
+            <form>
+                <input type="text"
+                       id="character"
+                       placeholder="Character Name"
+                       required
+                       autofocus>
+                <input type="text"
+                       id="realm"
+                       placeholder="Realm Name"
+                       required>
+                <input type="button"
+                       value="Search"
+                       id="search-btn"
+                       title="search">
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper-overlay hidden">
+            <div class="character-wrap">
+                <div class="character-profile">
+                    <p id="character-name">Character Name: </p>
+                    <p id="character-realm">Realm: </p>
+                </div>
+                <div class="character-value">
+                    <p id="character-level">Level: </p>
+                    <p id="character-health">Health: </p>
+                </div>
+            </div>
+            <div class="overlay">
+                <div class="compare-stats">
+                    <div class="stat-lists">
+                        <div class="attribute-list">
+                            <p>Attributes</p>
+                            <div class="attribute">
+                                <div class="attribute-name strength">Strength</div>
+                                <div class="attribute-value strength-value">--</div>
+                            </div>
+                            <div class="attribute">
+                                <div class="attribute-name agility">Agility</div>
+                                <div class="attribute-value agility-value">--</div>
+                            </div>
+                            <div class="attribute">
+                                <div class="attribute-name intillect">Intillect</div>
+                                <div class="attribute-value intillect-value">--</div>
+                            </div>
+                            <div class="attribute">
+                                <div class="attribute-name stamina">Stamina</div>
+                                <div class="attribute-value stamina-value">--</div>
+                            </div>
+                        </div>
+
+                        <div class="defence-list">
+                            <p>Defence</p>
+                            <div class="defence">
+                                <div class="defence-name armor">Armor</div>
+                                <div class="defence-value armor-value">--</div>
+                            </div>
+                            <div class="defence">
+                                <div class="defence-name dodge">Dodge</div>
+                                <div class="defence-value dodge-value">--</div>
+                            </div>
+                            <div class="defence">
+                                <div class="defence-name parry">Parry</div>
+                                <div class="defence-value parry-value">--</div>
+                            </div>
+                            <div class="defence">
+                                <div class="defence-name block">Block</div>
+                                <div class="defence-value block-value">--</div>
+                            </div>
+                        </div>
+
+                        <div class="attack-spell">
+
+                            <div class="attack-list">
+                                <p>Attack</p>
+                                <div class="attack">
+                                    <div class="attack-name damage">Damage</div>
+                                    <div class="attack-value damage-value">--</div>
+                                </div>
+                                <div class="attack">
+                                    <div class="attack-name speed">Speed</div>
+                                    <div class="attack-value speed-value">--</div>
+                                </div>
+                            </div>
+                            <div class="spell-list">
+                                <p>Spell</p>
+                                <div class="spell">
+                                    <div class="spell-name mana">Mana Regen</div>
+                                    <div class="spell-value mana-value">--</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="enhancement-list">
+                            <p>Enhancements</p>
+                            <div class="enhancement">
+                                <div class="enhancement-name crit">Crit</div>
+                                <div class="enhancement-value crit-value">--</div>
+                            </div>
+                            <div class="enhancement">
+                                <div class="enhancement-name haste">Haste</div>
+                                <div class="enhancement-value haste-value">--</div>
+                            </div>
+                            <div class="enhancement">
+                                <div class="enhancement-name mastery">Mastery</div>
+                                <div class="enhancement-value mastery-value">--</div>
+                            </div>
+                            <div class="enhancement">
+                                <div class="enhancement-name leech">Leech</div>
+                                <div class="enhancement-value leech-value">--</div>
+                            </div>
+                            <div class="enhancement">
+                                <div class="enhancement-name versatility">Versatility</div>
+                                <div class="enhancement-value versatility-value">--</div>
+                            </div>
+                            <div class="enhancement">
+                                <div class="enhancement-name leech">Leech</div>
+                                <div class="enhancement-value leech-value">--</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="separator"></div>
+                    <div class="compare">
+                        <p>Compare Stats</p>
+                        <div class="compare-images">
+                            <div class="current-character-img">
+                            </div>
+                            <div class="character">
+                                <img src="images/characters/undead.png"
+                                     alt="undead">
+                            </div>
+                            <div class="character">
+                                <img src="images/characters/orc.png"
+                                     alt="orc">
+                            </div>
+                            <div class="character">
+                                <img src="images/characters/troll.png"
+                                     alt="troll">
+                            </div>
+                            <div class="character">
+                                <img src="images/characters/tauren.png"
+                                     alt="tauren">
+                            </div>
+                            <div class="character">
+                                <img src="images/characters/goblin.png"
+                                     alt="goblin">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item-sets">
+                    <div class="sets-wrap">
+                        <p>My Item Sets</p>
+                        <div class="sets-images">
+                            <div class="pvp-img">
+                                <img src="images/item-set/pvp.png"
+                                     alt="pvp set"
+                                     title="pvp">
+                            </div>
+                            <div class="pve-img">
+                                <img src="images/item-set/pve.png"
+                                     alt="pve set"
+                                     title="pve">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items-list"></div>
+
+
+
+                </div>
+                <div id="close-btn"
+                     title="close">
+                    <img src="images/bg-logo-ico/close11.jpg"
+                         alt="close button">
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
