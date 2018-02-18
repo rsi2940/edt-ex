@@ -330,7 +330,7 @@ input {
     width: 90%;
   }
 }
-@media (max-width: 920px && pointer: coarse){
+@media (max-width: 920px && pointer: fine){
    background: rgba(0, 0, 0, 0.29) url('images/bg-logo-ico/bg-sml.jpg') no-repeat
     center center fixed;  }
 background-size:contain;
