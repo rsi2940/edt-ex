@@ -333,11 +333,14 @@ input {
 @media (max-width: 920px && pointer: coarse){
    background: rgba(0, 0, 0, 0.29) url('images/bg-logo-ico/bg-sml.jpg') no-repeat
     center center fixed;  }
+background-size:contain;
 }
 @media (max-width: 420px) {
   body{
  background: rgba(0, 0, 0, 0.29) url('images/bg-logo-ico/bg-sml.jpg') no-repeat
     center center fixed;  }
+  background-size:contain;
+
   .character-wrap {
     width: 100%;
   }
