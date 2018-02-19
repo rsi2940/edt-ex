@@ -333,13 +333,13 @@ input {
 }
 @media (max-width: 920px) and (pointer: coarse) {
   body {
-    background-image: url('images/bg-logo-ico/bg-sml-tab.jpg');
+    background: url('images/bg-logo-ico/bg-sml-tab.jpg') no-repeat center fixed;
   }
 }
 
 @media (max-width: 420px) {
   body {
-   background: url(images/bg-logo-ico/bg-sml-port.jpg) fixed;
+   background: url(images/bg-logo-ico/bg-sml-port.jpg) no-repeat center fixed;
     background-size: cover;
   }
   .character-wrap {
