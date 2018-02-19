@@ -305,7 +305,10 @@ input {
 }
 
 @media (max-width: 765px) {
-   
+  body {
+    background: url('images/bg-logo-ico/bg-sml.jpg') no-repeat center center
+      fixed;
+  }
   .overlay {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -330,9 +333,10 @@ input {
     width: 90%;
   }
 }
-@media (max-width: 920px) and (pointer: coarse){
-  body{
-   background-image: url('images/bg-logo-ico/bg-sml-tab.jpg'); }
+@media (max-width: 920px) and (pointer: coarse) {
+  body {
+    background-image: url('images/bg-logo-ico/bg-sml-tab.jpg');
+  }
 }
 
 @media (max-width: 420px) {
