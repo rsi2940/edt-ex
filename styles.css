@@ -5,9 +5,13 @@
 body {
   margin: 0;
   line-height: 1.15;
-  background: rgba(0, 0, 0, 0.29) url(images/bg-logo-ico/bg-lrg.jpg) no-repeat center fixed;
-  background-size: cover;
+ /* background: rgba(0, 0, 0, 0.6) url(images/bg-logo-ico/bg-lrg.jpg) no-repeat center fixed;
+  background-size: cover;*/
   font-family: Arial, Helvetica, sans-serif;
+}
+#wrapper{
+  background: rgba(0, 0, 0, 0.6) url(images/bg-logo-ico/bg-lrg.jpg) no-repeat center fixed;
+  background-size: cover;
 }
 main {
   padding-bottom: 3em;
@@ -304,8 +308,11 @@ input {
 }
 
 @media (max-width: 765px) {
-  body {
+ /* body {
     background: url('images/bg-logo-ico/bg-sml.jpg') no-repeat center fixed;
+  }*/
+  #wrapper {
+   background: url('images/bg-logo-ico/bg-sml.jpg') no-repeat center fixed;
   }
   .overlay {
     display: -webkit-box;
@@ -332,7 +339,11 @@ input {
   }
 }
 @media (max-width: 920px) and (pointer: fine) {
-  body {
+ /* body {
+    background: url(images/bg-logo-ico/bg-sml-tab.jpg) no-repeat center fixed;
+    background-size: cover;
+  }*/
+  #wrapper {
     background: url(images/bg-logo-ico/bg-sml-tab.jpg) no-repeat center fixed;
     background-size: cover;
   }
