@@ -341,7 +341,7 @@ input {
 
 @media (max-width: 420px) {
   body {
-    background-image: url('images/bg-logo-ico/bg-sml-port.jpg');
+    background-image: url('images/bg-logo-ico/bg-sml-tab.jpg');
   }
   .character-wrap {
     width: 100%;
