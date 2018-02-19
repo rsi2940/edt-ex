@@ -43,10 +43,12 @@ const mastery = document.getElementsByClassName('mastery-value');
 const leech = document.getElementsByClassName('leech-value');
 const versatility = document.getElementsByClassName('versatility-value');
 
+//round off function to 2 decimal point
 const getRoundedOffValue = value => {
   return Math.round(value * 100) / 100;
 };
 
+//function to append item name, item level, item buy and sell price
 async function apendProperty(item, id, name, level) {
   const priceApi = `${apiUrl}/item/${id}?locale=en_US&apikey=${apiKey}`;
   const priceResults = await fetch(priceApi).then(response => response.json());
@@ -75,6 +77,9 @@ async function apendProperty(item, id, name, level) {
   await captureTagArr.push(document.getElementsByClassName(`${item}`));
 }
 
+//function to catch item field from API;
+//after catching items API,
+//apendProperty() to append items level, buy/sell price
 async function callItemsApi(character, realm) {
   const itemsApi = `${apiUrl}/character/${realm}/${character}?fields=items&locale=en_US&apikey=${apiKey}`;
   const itemsResults = await fetch(itemsApi).then(response => response.json());
@@ -218,12 +223,14 @@ async function callItemsApi(character, realm) {
   }
 }
 
+// function to call stats field from API,
+//get different properties and append to the respective stats
 async function callStatsApi(character, realm) {
   const statsApi = `${apiUrl}/character/${realm}/${character}?fields=stats&locale=en_US&apikey=${apiKey}`;
   const statsResults = await fetch(statsApi).then(response => response.json());
 
   if (statsResults.stats) {
-    resetEverything();
+    resetEverything(); //call function to reset API data
     characterName.innerHTML += statsResults.name;
     characterRealm.innerHTML += statsResults.realm;
     characterLevel.innerHTML += statsResults.level;
@@ -266,18 +273,22 @@ async function callStatsApi(character, realm) {
     leech[1].innerHTML =
       getRoundedOffValue(statsResults.stats.leechRating) + '%';
 
+    //get current character image url from API
     currentCharImage.innerHTML = `<img src = "http://render-us.worldofwarcraft.com/character/${characterThumbnail}" alt = "picture of ${character}" title="${character}">`;
 
     if (itemsList[0].innerHTML.length <= 0) {
       callItemsApi(character, realm);
     }
 
+    //show overlay
     overlay.classList.remove('hidden');
   } else {
+    //display alert if error
     alert('Error While Processing API: ' + statsResults.reason);
   }
 }
 
+//function to reset API data
 function resetEverything() {
   itemsList[0].innerHTML = '';
   captureTagArr.length = 0;
@@ -287,18 +298,21 @@ function resetEverything() {
   characterHealth.innerHTML = 'Health: ';
 }
 
+//call API passing value of character and realm
 searchBtn.addEventListener('click', async () => {
   const characterName = document.getElementById('character').value;
   const realmName = document.getElementById('realm').value;
-  //resetEverything();
 
+  //call stats API
   await callStatsApi(characterName, realmName);
 
+  //reset input field
   document.getElementById('character').value = '';
   document.getElementById('realm').value = '';
 });
 
+//reset API data and hide overlay and ready for new API call
 closeBtn.addEventListener('click', () => {
-  resetEverything();
+  resetEverything(); //call function to reset API data
   overlay.classList.add('hidden');
 });
