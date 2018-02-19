@@ -354,7 +354,7 @@ input {
     background-size: cover;
   }*/
 }
-/*
+
 @media (max-width: 420px) {
   body {
    background: url(images/bg-logo-ico/bg-sml-port.jpg) no-repeat center fixed;
@@ -363,4 +363,4 @@ input {
   .character-wrap {
     width: 100%;
   }
-}*/
+}
