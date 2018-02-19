@@ -5,29 +5,15 @@
 body {
   margin: 0;
   line-height: 1.15;
-<<<<<<< HEAD
   background: rgba(0, 0, 0, 0.6) url(images/bg-logo-ico/bg-lrg.jpg) no-repeat
     center fixed;
-=======
- background: rgba(0, 0, 0, 0.6) url(images/bg-logo-ico/bg-lrg.jpg) no-repeat center fixed;
->>>>>>> d0a730dfcad0e61707db70507e7233ebc3625ce5
   background-size: cover;
   display: flex;
   flex-flow: column;
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
-<<<<<<< HEAD
 
-=======
-/* #wrapper{
-  background: rgba(0, 0, 0, 0.6) url(images/bg-logo-ico/bg-lrg.jpg) no-repeat center fixed;
-  background-size: cover;
-  display: flex;
-  flex-flow: column;
-  height: 100vh;
-}*/
->>>>>>> d0a730dfcad0e61707db70507e7233ebc3625ce5
 main {
   padding-bottom: 3em;
 }
@@ -330,20 +316,11 @@ input {
 }
 
 @media (max-width: 765px) {
-<<<<<<< HEAD
   body {
     background: url('images/bg-logo-ico/bg-sml.jpg') no-repeat center fixed;
     background-size: cover;
   }
 
-=======
- body {
-    background: url('images/bg-logo-ico/bg-sml.jpg') no-repeat center fixed;
-  }
- /* #wrapper {
-   background: url('images/bg-logo-ico/bg-sml.jpg') no-repeat center fixed;
-  }*/
->>>>>>> d0a730dfcad0e61707db70507e7233ebc3625ce5
   .overlay {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -368,27 +345,10 @@ input {
     width: 90%;
   }
 }
-<<<<<<< HEAD
 
 @media (max-width: 420px) {
   body {
     background: url(images/bg-logo-ico/bg-sml-port.jpg) no-repeat center fixed;
-=======
-@media (max-width: 920px) and (pointer: fine) {
- body {
-    background: url(images/bg-logo-ico/bg-sml-tab.jpg) no-repeat center fixed;
-    background-size: cover;
-  }
-  /*#wrapper {
-    background: url(images/bg-logo-ico/bg-sml-tab.jpg) no-repeat center fixed;
-    background-size: cover;
-  }*/
-}
-
-@media (max-width: 420px) {
-  body {
-   background: url(images/bg-logo-ico/bg-sml-port.jpg) no-repeat center fixed;
->>>>>>> d0a730dfcad0e61707db70507e7233ebc3625ce5
     background-size: cover;
   }
   .character-wrap {
