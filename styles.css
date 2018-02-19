@@ -333,7 +333,8 @@ input {
 }
 @media (max-width: 920px) and (pointer: coarse) {
   body {
-    background: url('images/bg-logo-ico/bg-sml-tab.jpg') no-repeat center fixed;
+    background: url(images/bg-logo-ico/bg-sml-tab.jpg) no-repeat center fixed;
+    background-size: cover;
   }
 }
 
