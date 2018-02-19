@@ -222,7 +222,8 @@ async function callStatsApi(character, realm) {
   const statsApi = `${apiUrl}/character/${realm}/${character}?fields=stats&locale=en_US&apikey=${apiKey}`;
   const statsResults = await fetch(statsApi).then(response => response.json());
 
-  if (statsResults) {
+  if (statsResults.stats) {
+    resetEverything();
     characterName.innerHTML += statsResults.name;
     characterRealm.innerHTML += statsResults.realm;
     characterLevel.innerHTML += statsResults.level;
@@ -289,7 +290,7 @@ function resetEverything() {
 searchBtn.addEventListener('click', async () => {
   const characterName = document.getElementById('character').value;
   const realmName = document.getElementById('realm').value;
-  resetEverything();
+  //resetEverything();
 
   await callStatsApi(characterName, realmName);
 
