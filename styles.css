@@ -330,16 +330,17 @@ input {
     width: 90%;
   }
 }
-@media (max-width: 920px && pointer: coarse){
+@media (max-width: 920px) and (pointer: coarse){
   body{
    background: rgba(0, 0, 0, 0.29) url('images/bg-logo-ico/bg-sml.jpg') no-repeat center center fixed; }
 }
 
-
 @media (max-width: 420px) {
-  body{
- background: rgba(0, 0, 0, 0.29) url('images/bg-logo-ico/bg-sml-port.jpg') no-repeat center center fixed;  }
-   .character-wrap {
+  body {
+    background: rgba(0, 0, 0, 0.29) url('images/bg-logo-ico/bg-sml-port.jpg')
+      no-repeat center center fixed;
+  }
+  .character-wrap {
     width: 100%;
   }
 }
