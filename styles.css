@@ -330,15 +330,14 @@ input {
     width: 90%;
   }
 }
-@media (max-width: 920px) and (pointer: fine){
+@media (max-width: 920px) and (pointer: coarse){
   body{
-   background: rgba(0, 0, 0, 0.29) url('images/bg-logo-ico/bg-sml-tab.jpg') no-repeat center center fixed; }
+   background-image: url('images/bg-logo-ico/bg-sml-tab.jpg'); }
 }
 
 @media (max-width: 420px) {
   body {
-    background: rgba(0, 0, 0, 0.29) url('images/bg-logo-ico/bg-sml-port.jpg')
-      no-repeat center center fixed;
+    background-image: url('images/bg-logo-ico/bg-sml-port.jpg');
   }
   .character-wrap {
     width: 100%;
